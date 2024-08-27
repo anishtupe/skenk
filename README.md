@@ -4,8 +4,8 @@ A Mobile game in which you can draw and imagine and players in your team can gue
 (in development)
 
 ## Tech-stack
-Flutter
-Node.js
-Mongodb
+Flutter,
+Node.js,
+Mongodb,
 
  
