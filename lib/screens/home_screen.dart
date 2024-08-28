@@ -17,7 +17,8 @@ class homescreen extends StatelessWidget {
               color: Colors.black,
               fontSize: 25,
             ),
-          )
+          ),
+          SizedBox()
         ],
       ),
     );
