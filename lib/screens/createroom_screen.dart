@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:skenk/widgets/custom_scaffold.dart';
 
 class createroom_screen extends StatefulWidget {
   const createroom_screen({super.key});
@@ -10,6 +11,15 @@ class createroom_screen extends StatefulWidget {
 class _createroom_screenState extends State<createroom_screen> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return const customscaffold(
+        child: Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Text(
+          'Create Room',
+          style: TextStyle(color: Colors.black, fontSize: 30),
+        )
+      ],
+    ));
   }
 }
