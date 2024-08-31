@@ -12,7 +12,7 @@ class homescreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             const Text(
-              "Create/Join a Skenk Room to Play",
+              "Create or Join a Room to Play",
               style: TextStyle(
                 color: Colors.black,
                 fontSize: 25,
@@ -22,13 +22,18 @@ class homescreen extends StatelessWidget {
               height: MediaQuery.of(context).size.height * 0.1,
             ),
             Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 ElevatedButton(
                     onPressed: () {},
                     style: ButtonStyle(
-                        backgroundColor: MaterialStateProperty.all(Colors.blue),
+                        backgroundColor: MaterialStateProperty.all(
+                            Color.fromARGB(255, 255, 0, 0).withOpacity(0.4)),
                         textStyle: MaterialStateProperty.all(
-                            TextStyle(color: Colors.black)),
+                            TextStyle(color: Color.fromARGB(255, 0, 0, 0))),
+                        shadowColor: MaterialStateProperty.all(
+                            Colors.black.withOpacity(0.9)),
+                        elevation: MaterialStateProperty.all(20),
                         minimumSize: MaterialStateProperty.all(
                             Size(MediaQuery.of(context).size.width / 2.5, 50)),
                         shape: MaterialStateProperty.all(RoundedRectangleBorder(
@@ -40,18 +45,17 @@ class homescreen extends StatelessWidget {
                 ElevatedButton(
                     onPressed: () {},
                     style: ButtonStyle(
-                      backgroundColor: MaterialStateProperty.all(
-                          const Color.fromARGB(255, 255, 255, 255)
-                              .withOpacity(0.4)),
-                      textStyle: MaterialStateProperty.all(
-                          TextStyle(color: Colors.black)),
-                      minimumSize: MaterialStateProperty.all(
-                          Size(MediaQuery.of(context).size.width / 2.5, 50)),
-                      shape: MaterialStateProperty.all(RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(10))),
-                      shadowColor: MaterialStateProperty.all(
-                          Colors.black.withOpacity(0.9)),
-                    ),
+                        backgroundColor: MaterialStateProperty.all(
+                            Color.fromARGB(255, 255, 0, 0).withOpacity(0.4)),
+                        textStyle: MaterialStateProperty.all(
+                            TextStyle(color: Colors.black)),
+                        minimumSize: MaterialStateProperty.all(
+                            Size(MediaQuery.of(context).size.width / 2.5, 50)),
+                        shape: MaterialStateProperty.all(RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10))),
+                        shadowColor: MaterialStateProperty.all(
+                            Colors.black.withOpacity(0.9)),
+                        elevation: MaterialStateProperty.all(20)),
                     child: const Text(
                       'Join',
                       style: TextStyle(color: Colors.black),
