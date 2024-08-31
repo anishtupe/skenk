@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:skenk/widgets/custom_scaffold.dart';
 
 class createroom_screen extends StatefulWidget {
@@ -16,9 +17,9 @@ class _createroom_screenState extends State<createroom_screen> {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Text(
-          'Create Room',
+          'Create/Join a Room to play',
           style: TextStyle(color: Colors.black, fontSize: 30),
-        )
+        ),
       ],
     ));
   }
