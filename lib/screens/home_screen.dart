@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:skenk/screens/createroom_screen.dart';
 import 'package:skenk/widgets/custom_scaffold.dart';
 
 class homescreen extends StatelessWidget {
@@ -25,7 +26,9 @@ class homescreen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () => Navigator.of(context).push(
+                        MaterialPageRoute(
+                            builder: (context) => createroom_screen())),
                     style: ButtonStyle(
                         backgroundColor: MaterialStateProperty.all(
                             Color.fromARGB(255, 255, 0, 0).withOpacity(0.4)),

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:skenk/widgets/custom_scaffold.dart';
+import 'package:skenk/widgets/custom_textfield.dart';
 
 class createroom_screen extends StatefulWidget {
   const createroom_screen({super.key});
@@ -10,6 +11,7 @@ class createroom_screen extends StatefulWidget {
 }
 
 class _createroom_screenState extends State<createroom_screen> {
+  final TextEditingController _namecontroller = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return customscaffold(
@@ -25,6 +27,8 @@ class _createroom_screenState extends State<createroom_screen> {
         ),
         Container(
           margin: const EdgeInsets.symmetric(horizontal: 20),
+          child: reuseabletextfield("Enter your name", Icons.person_2_outlined,
+              false, _namecontroller),
         )
       ],
     ));
