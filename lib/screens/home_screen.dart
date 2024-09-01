@@ -16,7 +16,7 @@ class homescreen extends StatelessWidget {
             const Text(
               "Create or Join a Room to Play",
               style: TextStyle(
-                color: Colors.black,
+                color: Color.fromARGB(255, 255, 255, 255),
                 fontSize: 25,
               ),
             ),
@@ -27,17 +27,17 @@ class homescreen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 ElevatedButton(
-                    onPressed: () => Navigator.of(context).push(
-                        MaterialPageRoute(
-                            builder: (context) => createroom_screen())),
+                    onPressed: () => Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) => createroom_screen())),
                     style: ButtonStyle(
                         backgroundColor: MaterialStateProperty.all(
-                            Color.fromARGB(255, 255, 0, 0).withOpacity(0.4)),
+                            Color.fromARGB(183, 52, 0, 142)),
                         textStyle: MaterialStateProperty.all(
                             TextStyle(color: Color.fromARGB(255, 0, 0, 0))),
                         shadowColor: MaterialStateProperty.all(
-                            Colors.black.withOpacity(0.9)),
-                        elevation: MaterialStateProperty.all(20),
+                            const Color.fromARGB(255, 255, 255, 255)
+                                .withOpacity(0.3)),
+                        elevation: MaterialStateProperty.all(4),
                         minimumSize: MaterialStateProperty.all(
                             Size(MediaQuery.of(context).size.width / 2.5, 50)),
                         shape: MaterialStateProperty.all(RoundedRectangleBorder(
@@ -52,7 +52,7 @@ class homescreen extends StatelessWidget {
                             builder: (context) => joinroom_screen())),
                     style: ButtonStyle(
                         backgroundColor: MaterialStateProperty.all(
-                            Color.fromARGB(255, 255, 0, 0).withOpacity(0.4)),
+                            Color.fromARGB(183, 52, 0, 142)),
                         textStyle: MaterialStateProperty.all(
                             TextStyle(color: Colors.black)),
                         minimumSize: MaterialStateProperty.all(
@@ -60,8 +60,9 @@ class homescreen extends StatelessWidget {
                         shape: MaterialStateProperty.all(RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(10))),
                         shadowColor: MaterialStateProperty.all(
-                            Colors.black.withOpacity(0.9)),
-                        elevation: MaterialStateProperty.all(20)),
+                            const Color.fromARGB(255, 255, 254, 254)
+                                .withOpacity(0.3)),
+                        elevation: MaterialStateProperty.all(4)),
                     child: const Text(
                       'Join',
                       style: TextStyle(color: Colors.black),

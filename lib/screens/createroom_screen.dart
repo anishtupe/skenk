@@ -20,7 +20,8 @@ class _createroom_screenState extends State<createroom_screen> {
       children: [
         const Text(
           'Create Room',
-          style: TextStyle(color: Colors.black, fontSize: 30),
+          style: TextStyle(
+              color: Color.fromARGB(255, 255, 255, 255), fontSize: 30),
         ),
         SizedBox(
           height: MediaQuery.of(context).size.height * 0.08,
