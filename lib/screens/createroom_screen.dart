@@ -12,6 +12,7 @@ class createroom_screen extends StatefulWidget {
 
 class _createroom_screenState extends State<createroom_screen> {
   final TextEditingController _namecontroller = TextEditingController();
+  final TextEditingController _roomnamecontroller = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return customscaffold(
@@ -30,6 +31,41 @@ class _createroom_screenState extends State<createroom_screen> {
           margin: const EdgeInsets.symmetric(horizontal: 20),
           child: reuseabletextfield("Enter your name", Icons.person_2_outlined,
               false, _namecontroller),
+        ),
+        const SizedBox(
+          height: 20,
+        ),
+        Container(
+          margin: const EdgeInsets.symmetric(horizontal: 20),
+          child: reuseabletextfield("Enter Room name", Icons.person_2_outlined,
+              false, _roomnamecontroller),
+        ),
+        const SizedBox(height: 20),
+        DropdownButton<String>(
+          focusColor: Color(0xffF5F6FA),
+          items: <String>[
+            "2",
+            "5",
+            "10",
+            "15",
+          ]
+              .map<DropdownMenuItem<String>>((String value) => DropdownMenuItem(
+                    value: value,
+                    child: Text(
+                      value,
+                      style: TextStyle(color: Colors.black),
+                    ),
+                  ))
+              .toList(),
+          hint: const Text(
+            'Select Max Rounds',
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: 14,
+              fontWeight: FontWeight.w500,
+            ),
+          ),
+          onChanged: (String? value) {},
         )
       ],
     ));
